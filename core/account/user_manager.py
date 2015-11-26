@@ -8,7 +8,8 @@ class UserManager():
     def __init__(self):
         pass
 
-    def register(self, fb_token):
+    @staticmethod
+    def register(fb_token):
         uid = Utility.hash_to_key(fb_token)
         token = Utility.generate_token()
 

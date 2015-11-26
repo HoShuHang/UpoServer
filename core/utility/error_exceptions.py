@@ -18,3 +18,8 @@ class Error(Exception):
 class FbTokenExistedError(Error):
     def __init__(self):
         super(FbTokenExistedError, self).__init__("fb token has registered!", status.HTTP_409_CONFLICT)
+
+
+class ParameterError(Error):
+    def __init__(self):
+        super(ParameterError, self).__init__("parameter missing!", status.HTTP_403_FORBIDDEN)

@@ -1,1 +1,1 @@
-__author__ = 'kevinho'
+from api.user.register import *
