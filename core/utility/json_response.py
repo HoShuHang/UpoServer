@@ -19,5 +19,4 @@ class JSONResponse():
         else:
             content = JSONRenderer().render(result) if type(result) is dict else result
 
-        print(content)
         return HttpResponse(content, status=response_code, content_type="application/json")

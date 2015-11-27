@@ -16,7 +16,7 @@ class RegisterAPITestCase(APITestCase):
         json_data = json.loads(response.content.decode("utf-8"))
         user = User.objects.get(fb_token="abcde")
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(json_data["access_token1"], user.token)
+        self.assertEqual(json_data["access_token"], user.token)
 
     def tearDown(self):
         pass
